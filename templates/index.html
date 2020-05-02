@@ -1,0 +1,46 @@
+
+{% extends 'layouts/main-layout.html'%}
+
+{% block content %}
+
+  {% include 'status-i.html' %}
+
+    <div class="row"> <!-- ROW1 -->
+
+          <div class="col-md-5">
+            <h5>Artists:</h5>
+            <hr>
+            <div class="card card-body">
+              <a class="btn btn-primary btn-sm btn-block" href="#"> Create Artist </a>
+              <table class="table table-sm">
+                <tr>
+                  <th></th>
+                  <th>Artist</th>
+                  <th>Type</th>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="col-md-7">
+            <h5>Shows:</h5>
+            <hr>
+            <div class="card card-body">
+              <a class="btn btn-primary btn-sm btn-block" href="#"> Create Show </a>
+              <table class="table table-sm">
+                <tr>
+                  <th></th>
+                  <th>Place</th>
+                  <th>Time</th>
+                  <th>Artist</th>
+                  <th>Something</th>
+                </tr>
+              </table>
+            </div>
+          </div>
+     </div>
+
+
+
+
+{% endblock %}

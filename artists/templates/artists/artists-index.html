@@ -1,0 +1,75 @@
+
+{% extends 'layouts/main-layout.html'%}
+
+{% block content %}
+<div class="container">
+<br>
+    <div class="card sartist card-body">
+        <div class="content">
+          <h3 class="card-title">Search Artists <i class="fa fa-search"></i></h3>
+        </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <p>By name:</p>
+              <input type="text" class="form-control" placeholder="">
+            </div>
+
+            <div class="col-md-2">
+              <p>By Instrument:</p>
+              <select id="inputState" class="form-control">
+                <option selected>Singer</option>
+                <option>...</option>
+              </select>
+            </div>
+
+            <div class="col-md-2">
+              <p>By Gender:</p>
+              <select id="inputState" class="form-control">
+                <option selected>Male</option>
+                <option>...</option>
+              </select>
+            </div>
+
+            <div class="col-md-2">
+              <p>By Price:</p>
+              <input type="text" class="form-control" placeholder="$">
+           </div>
+
+           <div class="col-md-2">
+             <p>By Agency:</p>
+             <select id="inputState" class="form-control">
+               <option selected>THM</option>
+               <option>AUTONOMO</option>
+             </select>
+           </div>
+      </div>
+
+  </div>
+
+
+        <div class="row statusrow">
+          <div class="col-md">
+              <h1>Artists:</h1>
+            <hr>
+            <div class="card card-body">
+              <table class="table table-hover table-sm">
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Surname</th>
+                  <th>Gender</th>
+                  <th>Type</th>
+                  <th>NIE</th>
+                  <th>N.Price</th>
+                  <th>B.Price</th>
+                  <th>IRPF</th>
+                  <th>Agency</th>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+</div>
+{% endblock %}

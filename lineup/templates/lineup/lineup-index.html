@@ -1,0 +1,29 @@
+
+{% extends 'layouts/main-layout.html'%}
+
+  {% block content %}
+  <div class="flex-center position-ref">
+      <div class="content">
+          {% for weeks in month %}
+          <div class="card text-center">
+            <div class="card-header">
+              {{ months }}
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <p>{{ week }}</p>
+                {% for day in days %}
+                    <div class="col-sm">
+                        <h2>{{ day }}</h2>
+                    </div>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="card-footer text-muted">
+              FOOTER
+            </div>
+          </div>
+          {% endfor %}
+      </div>
+  </div>
+  {% endblock %}

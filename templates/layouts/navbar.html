@@ -1,0 +1,38 @@
+<!--BOOTSTRAP NAVBAR-->
+{% load static %}
+
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <img class="logo-img" src="{% static 'img/hrht-logo.png' %}" alt="">
+      <a id="vibelogo" href="/">Vibe </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample09">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/artists">Artists <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/lineup">Lineup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/memorabilia" tabindex="-1" aria-disabled="true">Memorabilia</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown09">
+            <a class="dropdown-item" href="#">Candy Rock</a>
+            <a class="dropdown-item" href="#">Sunsets</a>
+            <a class="dropdown-item" href="#">Lagoon</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about" tabindex="-1" aria-disabled="true">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+</div>

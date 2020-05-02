@@ -1,0 +1,103 @@
+
+html, body {
+    background-color: #ebeff5;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+    padding: 25px;
+}
+.test {
+  font-size: 5rem;
+}
+
+.logo-img {
+  height: 80px;
+  width: 100px;
+}
+
+#vibelogo {
+  color: black;
+  font-size: 4rem;
+  text-decoration: none !important;
+  margin-right: 28px;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.position-ref {
+  position: relative;
+}
+
+.top-right {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+.container {
+  margin-bottom: 20px;
+}
+
+/* ------------------------------NAVBAR---------------------------------- */
+
+.nav-link {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-right: 15px;
+}
+
+/* ------------------------------ARTISTS---------------------------------- */
+
+.sartist {
+  margin-bottom: 20px;
+}
+
+/* ------------------------------STATUS.MAIN---------------------------------- */
+
+.statusrow {
+  margin-bottom: 15px;
+}
+
+#total-artists {
+  background-color: #4cb4c7;
+}
+
+#shows-months {
+  background-color: #7abecc;
+}
+
+#cost-month {
+  background-color: #7CD1C0;
+}
