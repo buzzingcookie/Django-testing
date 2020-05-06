@@ -6,11 +6,13 @@ from . import views
 
 
 urlpatterns = [
+    path('', views.home, name='home'),
+    path('about/', views.about, name='about'),
     path('admin/', admin.site.urls),
-    path('', views.home),
-    path('about/', views.about),
 
     path('lineup/', include('lineup.urls')),
+
     path('artists/', include('artists.urls')),
+
     path('memorabilia/', include('memorabilia.urls')),
 ]

@@ -1,0 +1,76 @@
+
+{% extends 'layouts/main-layout.html'%}
+
+  {% block content %}
+  <br>
+  <div class="card sartist card-body">
+            <div class="row">
+              {% for months in numMonths %}
+              <div class="col-md">
+                  <a class="btn btn-sm btn-info" href="{% url 'currentLineup' yearNum=currentYear monthNum=months %}">{{ monthName }}</a>
+              </div>
+              {% endfor %}
+            </div>
+     </div>
+
+
+      <div class="container">
+          {% for weeks in monthV %}
+          <div class="card text-center">
+            <div class="card-header">
+              <h3>{{ months }}</h3>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                {% for days in weeks %}
+                    <div class="col-sm">
+                        <h2> {{ days }}</h2>
+                    </div>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="card-footer text-muted">
+              FOOTER
+            </div>
+          </div>
+          {% endfor %}
+      </div> 
+      <!--
+      <div class="row">
+       <div class="container">
+        <div class="col-md">
+          <div class="content">
+            <h3>Shows {{ months }} {{ yearNum }}</h3>
+          </div>
+          <hr>
+          <div class="card card-body">
+            <div class="content">
+              <a class="btn btn-primary col-md-4" href="{% url 'create_show' %}"> Add Show This month </a>
+            </div>
+            <br>
+            <table class="table table-hover table-sm">
+              <tr>
+                <th></th>
+                <th>Artist</th>
+                <th>Place</th>
+                <th>Time</th>
+                <th>Update</th>
+                <th>Remove</th>
+              </tr>
+              {% for shows in showsMonthly %}
+              <tr>
+                <td></td>
+                <td><a class="btn btn-md">{{ shows.Artist.Nickname }}</a></td>
+                <td>{{ shows.Place }}</td>
+                <td>{{ shows.Start|date:"H:i" }} - {{ shows.End|date:"H:i" }}</td>
+                <td><a class="btn btn-sm btn-info" href="#">UPDATE</a></td>
+                <td><a class="btn btn-sm btn-danger"href="#">REMOVE</a></td>
+              </tr>
+              {% endfor%}
+            </table>
+          </div>
+        </div>
+      </div>
+   </div> -->
+
+  {% endblock %}

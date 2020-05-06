@@ -1,15 +1,35 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import *
+from lineup.models import *
+
 import calendar
 
 def artists(request):
-    i = 2
 
-    month = calendar.monthcalendar(2020, i)
-    months = calendar.month_name[i]
-    days = calendar.day_name
+    artists = Artist.objects.all()
+    currentYear = datetime.now().year
+    currentMonth = datetime.now().month
 
-
-    context = { 'month':month, 'months':months, 'days':days }
+    context = {
+        'currentYear':currentYear,
+        'currentMonth':currentMonth,
+        'artists': artists,
+    }
     return render(request, 'artists/artists-index.html', context)
+
+
+def artist(request, artist_nickname):
+
+    artist = Artist.objects.get(Nickname=artist_nickname)
+    instruments = artist.Instruments.all()
+
+    shows = artist.show_set.all()
+    show_count = shows.count()
+
+    context = {
+        'shows':shows,
+        'show_count':show_count,
+        'artist': artist,
+        'instruments':instruments,
+    }
+    return render(request, 'artists/artist-show.html', context)

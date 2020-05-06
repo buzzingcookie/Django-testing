@@ -1,0 +1,67 @@
+
+{% extends 'layouts/main-layout.html'%}
+
+{% block content %}
+
+<br>
+
+<div class="row customrow">
+
+  <div class="col">
+    <div class="col-md">
+      <div class="card text-center text-black mb-3">
+        <div class="card-header">
+          <h5 class="card-title">Artist Info</h5>
+        </div>
+        <div class="card-body">
+          <p>Name: <b>{{ artist.Name}}</b></p>
+          <p>Surname: <b> {{ artist.Surname}}</b></p>
+          <p>Instrument: <b> {% for instrument in instruments %} {{ instrument }} {% endfor %}</b></p>
+          <p>NIE: <b> {{ artist.NIE}} </b></p>
+          <p>Agency: <b> {{ artist.Agency }} </b></p>
+          <p>IRPF: <b> {{ artist.IRPF }} </b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+    <div class="col-md-9">
+        <div class="content">
+          <h1>Shows of {{ artist.Nickname }}:</h1>
+        </div>
+      <hr>
+      <div class="card card-body">
+        <table class="table table-hover table-sm">
+          <tr>
+            <th>Place</th>
+            <th>From</th>
+            <th>Until</th>
+            <th>Date</th>
+            <th>UPDATE</th>
+            <th>REMOVE</th>
+          </tr>
+
+          {% for show in shows %}
+          <tr>
+            <td>{{ show.Place }}</td>
+            <td>{{ show.Start|date:"H:i" }}</td>
+            <td>{{ show.End|date:"H:i" }}</td>
+            <td>{{ show.Date }}</td>
+            <td><a class="btn btn-sm btn-info" href="#">UPDATE</a></td>
+            <td><a class="btn btn-sm btn-danger"href="#">REMOVE</a></td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+
+</div>
+
+
+
+
+
+{% endblock %}

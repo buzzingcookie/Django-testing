@@ -5,42 +5,40 @@
 
   {% include 'status-i.html' %}
 
-    <div class="row"> <!-- ROW1 -->
-
-          <div class="col-md-5">
-            <h5>Artists:</h5>
-            <hr>
-            <div class="card card-body">
-              <a class="btn btn-primary btn-sm btn-block" href="#"> Create Artist </a>
-              <table class="table table-sm">
-                <tr>
-                  <th></th>
-                  <th>Artist</th>
-                  <th>Type</th>
-                </tr>
-              </table>
-            </div>
-          </div>
+    <div class="row"> <!-- ROW2 -->
 
           <div class="col-md-7">
-            <h5>Shows:</h5>
+            <div class="content">
+              <h3>Shows Today:</h3>
+              <p>{{ today }}</p>
+            </div>
             <hr>
             <div class="card card-body">
-              <a class="btn btn-primary btn-sm btn-block" href="#"> Create Show </a>
-              <table class="table table-sm">
+              <div class="content">
+                <a class="btn btn-primary col-md-4" href="{% url 'create_show' %}"> Add Show Today </a>
+              </div>
+              <br>
+              <table class="table table-hover table-sm">
                 <tr>
                   <th></th>
+                  <th>Artist</th>
                   <th>Place</th>
                   <th>Time</th>
-                  <th>Artist</th>
-                  <th>Something</th>
+                  <th>Update</th>
+                  <th>Remove</th>
                 </tr>
+                {% for scheduledShow in scheduledShows %}
+                <tr>
+                  <td></td>
+                  <td><a class="btn btn-small" href="{% url 'artist' scheduledShow.Artist.Nickname %}">{{ scheduledShow.Artist.Nickname }}</a></td>
+                  <td>{{ scheduledShow.Place }}</td>
+                  <td>{{ scheduledShow.Start|date:"H:i" }} - {{ scheduledShow.End|date:"H:i" }}</td>
+                  <td><a class="btn btn-sm btn-info" href="#">UPDATE</a></td>
+                  <td><a class="btn btn-sm btn-danger"href="#">REMOVE</a></td>
+                </tr>
+                {% endfor%}
               </table>
             </div>
           </div>
      </div>
-
-
-
-
 {% endblock %}

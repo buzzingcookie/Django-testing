@@ -3,44 +3,54 @@
 
 <div class="row statusrow">
 
-  <div class="col">
-    <div class="col-md">
-      <div class="card text-center text-white mb-3" id="total-artists">
-        <div class="card-header">
-          <h5 class="card-title">Total Artists</h5>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title"></h3>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-    <div class="col-md">
-      <div class="card text-center text-white mb-3" id="shows-months">
-        <div class="card-header">
-          <h5 class="card-title">Shows/Month</h5>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title"></h3>
+      <div class="col">
+        <div class="col-md">
+          <div class="card text-center text-white mb-3" id="total-artists">
+            <div class="card-header">
+              <h5 class="card-title">Total Artists</h5>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">{{ total_artists }}</h3>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="col">
-    <div class="col-md">
-      <div class="card text-center text-white mb-3" id="cost-month">
-        <div class="card-header">
-          <h5 class="card-title">Cost/Month</h5>
-        </div>
-        <div class="card-body">
-          <h3 class="card-title"></h3>
+      <div class="col">
+        <div class="col-md">
+          <div class="card text-center text-white mb-3" id="shows-months">
+            <div class="card-header">
+              <h5 class="card-title">Shows/Places</h5>
+            </div>
+            <div class="card-body">
+              <table class="table table-hover table-sm">
+                <tr>
+                  <th>Place</th>
+                  <th>NªShows</th>
+                </tr>
+
+
+                <tr>
+                  <td>Lobby</td>
+                  <td>{{ lobbyShows }}</td>
+                </tr>
+
+              </table>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-
+      <div class="col">
+        <div class="col-md">
+          <div class="card text-center text-white mb-3" id="cost-month">
+            <div class="card-header">
+              <h5 class="card-title">Cost/Month</h5>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title"></h3>
+            </div>
+          </div>
+        </div>
+      </div>
 </div>
